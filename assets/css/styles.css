@@ -1,0 +1,300 @@
+html,
+body {
+    min-height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo", sans-serif;
+}
+
+body {
+    background-color: #232323;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+footer {
+    background-color: black;
+    margin-top: 80px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+header {
+    background-color: black;
+    border-bottom: 4px solid red;
+}
+
+h2 {
+    font-size: 45px;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.col-4 {
+    width: calc(33.33% - 20px);
+    padding: 0 10px;
+}
+
+.col-6 {
+    width: calc(50% - 20px);
+    padding: 0 10px;
+}
+
+.col-12 {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.mt3 {
+    margin-top: 3%;
+}
+
+.mt5 {
+    margin-top: 5%;
+}
+
+.mb5 {
+    margin-bottom: 5%;
+}
+
+.pt5 {
+    margin-top: 5%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.banner {
+    min-height: 600px;
+    background-image: url("../imgs/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    font-size: 40px;
+    color: #fff;
+}
+
+.circle {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    padding: 8px;
+    text-align: center;
+}
+
+.number {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.desc {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.container-contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.card {
+    text-align: center;
+    perspective: 1000px;
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+}
+
+
+.subtitle {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.card-flipper {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.description,
+.video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.description {
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    font-size: 14px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    transform: rotateY(180deg);
+
+}
+
+.video {
+    color: #fff;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    font-size: 14px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.card:hover .card-flipper {
+    transform: rotateY(180deg);
+}
+
+.background-video-first {
+    background-image: url("../imgs/team-latam.png");
+    background-size: cover;
+}
+
+.background-video-second {
+    background-image: url("../imgs/travel-meets-fashion.png");
+    background-size: cover;
+}
+
+.background-video-thre {
+    background-image: url("../imgs/velocidad-riesgo.png");
+    background-size: cover;
+}
+
+.background-video-for {
+    background-image: url("../imgs/experiencia.png");
+    background-size: cover;
+}
+
+.reproductor-frame {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: calc(80%/2);
+    padding-top: 30px;
+    position: relative;
+}
+
+.reproductor-frame iframe,
+.video-responsive object,
+.video-responsive embed {
+    height: 380px;
+    width: 60%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .reproductor-frame iframe,
+    .video-responsive object,
+    .video-responsive embed {
+        height: 230px;
+        width: 100%;
+    }
+
+    .reproductor-frame {
+        padding-bottom: 100%;
+    }
+
+    .container-contador {
+        gap: 5px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .number {
+        font-size: 22px;
+    }
+
+    .circle {
+        height: 70px;
+        width: 70px;
+    }
+
+    .banner {
+        min-height: 480px;
+    }
+
+    .container-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-row-gap: 60px;
+    }
+
+
+    .description {
+        width: 140px;
+        height: 140px;
+
+    }
+
+    .video {
+        width: 140px;
+        height: 140px;
+    }
+
+    .card {
+        width: 140px;
+        height: 140px;
+    }
+}
